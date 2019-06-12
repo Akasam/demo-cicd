@@ -6,7 +6,7 @@ job('My Job 1') {
         }
     }
     triggers {
-        scm('H/5 * * * *')
+        scm('H/10 * * * *')
     }
     wrappers {
         nodejs('NodeJS10')
