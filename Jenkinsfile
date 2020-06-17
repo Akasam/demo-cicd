@@ -8,19 +8,13 @@ node {
    
    stage('install') {
      nodejs(nodeJSInstallationName: 'NodeJS9') {
-       sh 'npm install --only=dev'
+       sh 'npm install'
      }
    }
    
    stage('test') {
      nodejs(nodeJSInstallationName: 'NodeJS9') {
        sh 'npm test'
-     }
-   }
-   
-   stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-       def app = docker.build("akasam/nodedemoapp:${commit_id}", '.').push()
      }
    }
 }
