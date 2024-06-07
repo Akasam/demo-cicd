@@ -1,4 +1,4 @@
-job('My Job 1') {
+job('Jenkins Demo - Prod') {
     scm {
         git('https://github.com/akasam/jenkins-demo1') {  node -> 
             node / gitConfigName('srohaut')
@@ -17,7 +17,7 @@ job('My Job 1') {
     }
 }
 
-job('My Job 2') {
+job('Jenkins Demo - Experimental') {
     scm {
         git('https://github.com/akasam/jenkins-demo1') {  node -> 
             node / gitConfigName('srohaut')
