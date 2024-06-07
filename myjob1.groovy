@@ -1,15 +1,15 @@
 job('My Job 1') {
     scm {
         git('https://github.com/akasam/jenkins-demo1') {  node -> 
-            node / gitConfigName('srohaut  ')
-            node / gitConfigEmail('srohaut@estiam.com')
+            node / gitConfigName('srohaut')
+            node / gitConfigEmail('srohaut@gmail.com')
         }
     }
     triggers {
-        scm('H/10 * * * *')
+        scm('H/5 * * * *')
     }
     wrappers {
-        nodejs('NodeJS10')
+        nodejs('NodeJS-20-LTS')
     }
     steps {
         shell("npm install")
@@ -20,15 +20,15 @@ job('My Job 1') {
 job('My Job 2') {
     scm {
         git('https://github.com/akasam/jenkins-demo1') {  node -> 
-            node / gitConfigName('srohaut  ')
-            node / gitConfigEmail('srohaut@estiam.com')
+            node / gitConfigName('srohaut')
+            node / gitConfigEmail('srohaut@gmail.com')
         }
     }
     triggers {
-        scm('H/10 * * * *')
+        scm('H/5 * * * *')
     }
     wrappers {
-        nodejs('NodeJS11')
+        nodejs('NodeJS-Experimental')
     }
     steps {
         shell("npm install")
