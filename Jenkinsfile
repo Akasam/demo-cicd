@@ -7,13 +7,13 @@ node {
    }
    
    stage('install') {
-     nodejs(nodeJSInstallationName: 'NodeJS9') {
+     nodejs(nodeJSInstallationName: 'NodeJS-20-LTS') {
        sh 'npm install'
      }
    }
    
    stage('test') {
-     nodejs(nodeJSInstallationName: 'NodeJS9') {
+     nodejs(nodeJSInstallationName: 'NodeJS-20-LTS') {
        sh 'npm test'
      }
    }
