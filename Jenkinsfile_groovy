@@ -1,0 +1,2 @@
+def pipelineScript = load 'jenkinsdemo.groovy'
+pipelineScript()
