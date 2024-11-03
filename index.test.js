@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { app, server } = require('./app');
+const { app, server } = require('./index');
 
 describe('GET /', () => {
     afterAll(done => {
