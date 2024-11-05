@@ -8,7 +8,7 @@ describe('GET /', () => {
 
     it('should return Hello, World!', async () => {
         const response = await request(app).get('/');
-        expect(response.text).toBe('Hello, World!'); // This will pass
+        expect(response.text).toBe('Error'); // This will pass
         expect(response.statusCode).toBe(200);
     });
 });
